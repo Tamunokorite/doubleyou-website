@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+.typewriter {
+    overflow: hidden; 
+    white-space: nowrap; /* Keep text on one line */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    /* display: inline-block; */
+    animation: typing 3.5s steps(40, end);
+}
+
+.typewriter:after {
+    content: '|'; /* Initial cursor */
+    animation: blink 1s infinite; /* Blinking animation */
+    /* margin-left: 2px; Adjust cursor position */
+}
+
+.slide-in-down {
+    animation: slide-in-right 0.4s steps(40, end);
+}
+
+.caption-slide-in {
+    animation: slide-in-right 0.4s steps(40, end);
+    /* animation-delay: 3.5s; */
+}
+
+/* Typing Animation */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes slide-in-right {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-down {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Blinking Cursor Animation */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
