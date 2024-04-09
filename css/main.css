@@ -6,6 +6,10 @@ html {
     scroll-behavior: smooth;
 }
 
+a {
+    cursor: pointer;
+}
+
 .typewriter {
     overflow: hidden; 
     white-space: nowrap; /* Keep text on one line */
